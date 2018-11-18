@@ -1,0 +1,15 @@
+D:\Work Space\C#\WeatherControlAPP\OOProjektovanje_lab2\bin\Debug\OOProjektovanje_lab2.exe.config
+D:\Work Space\C#\WeatherControlAPP\OOProjektovanje_lab2\bin\Debug\OOProjektovanje_lab2.exe
+D:\Work Space\C#\WeatherControlAPP\OOProjektovanje_lab2\bin\Debug\OOProjektovanje_lab2.pdb
+D:\Work Space\C#\WeatherControlAPP\OOProjektovanje_lab2\obj\Debug\OOProjektovanje_lab2.csprojAssemblyReference.cache
+D:\Work Space\C#\WeatherControlAPP\OOProjektovanje_lab2\obj\Debug\OOProjektovanje_lab2.FormMain.resources
+D:\Work Space\C#\WeatherControlAPP\OOProjektovanje_lab2\obj\Debug\OOProjektovanje_lab2.Properties.Resources.resources
+D:\Work Space\C#\WeatherControlAPP\OOProjektovanje_lab2\obj\Debug\OOProjektovanje_lab2.csproj.GenerateResource.cache
+D:\Work Space\C#\WeatherControlAPP\OOProjektovanje_lab2\obj\Debug\OOProjektovanje_lab2.csproj.CoreCompileInputs.cache
+D:\Work Space\C#\WeatherControlAPP\OOProjektovanje_lab2\obj\Debug\OOProjektovanje_lab2.exe
+D:\Work Space\C#\WeatherControlAPP\OOProjektovanje_lab2\obj\Debug\OOProjektovanje_lab2.pdb
+D:\Work Space\C#\WeatherControlAPP\OOProjektovanje_lab2\obj\Debug\OOProjektovanje_lab2.FormGenerator.resources
+D:\Work Space\C#\WeatherControlAPP\OOProjektovanje_lab2\obj\Debug\OOProjektovanje_lab2.RangeSetter.resources
+D:\Work Space\C#\WeatherControlAPP\OOProjektovanje_lab2\obj\Debug\OOProjektovanje_lab2.GraphForm.resources
+D:\Work Space\C#\WeatherControlAPP\OOProjektovanje_lab2\obj\Debug\OOProjektovanje_lab2.listFromGraphForm.resources
+D:\Work Space\C#\WeatherControlAPP\OOProjektovanje_lab2\obj\Debug\OOProjektovanje_lab2.FormStatisticalData.resources

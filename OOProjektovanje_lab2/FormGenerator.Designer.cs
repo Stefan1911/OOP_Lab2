@@ -44,6 +44,7 @@
             this.intervalCheck = new System.Windows.Forms.CheckBox();
             this.intervalBox = new System.Windows.Forms.TextBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -190,11 +191,22 @@
             this.timer.Interval = 1000;
             this.timer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(408, 248);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(68, 31);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Read from";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // FormGenerator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(488, 328);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.intervalBox);
             this.Controls.Add(this.intervalCheck);
             this.Controls.Add(this.graniceChek);
@@ -234,5 +246,6 @@
         private System.Windows.Forms.CheckBox intervalCheck;
         private System.Windows.Forms.TextBox intervalBox;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Button button1;
     }
 }

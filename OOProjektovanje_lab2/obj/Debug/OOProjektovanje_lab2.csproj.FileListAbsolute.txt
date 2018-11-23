@@ -13,3 +13,4 @@ D:\Work Space\C#\WeatherControlAPP\OOProjektovanje_lab2\obj\Debug\OOProjektovanj
 D:\Work Space\C#\WeatherControlAPP\OOProjektovanje_lab2\obj\Debug\OOProjektovanje_lab2.GraphForm.resources
 D:\Work Space\C#\WeatherControlAPP\OOProjektovanje_lab2\obj\Debug\OOProjektovanje_lab2.listFromGraphForm.resources
 D:\Work Space\C#\WeatherControlAPP\OOProjektovanje_lab2\obj\Debug\OOProjektovanje_lab2.FormStatisticalData.resources
+D:\Work Space\C#\WeatherControlAPP\OOProjektovanje_lab2\obj\Debug\OOProjektovanje_lab2.ListForm.resources

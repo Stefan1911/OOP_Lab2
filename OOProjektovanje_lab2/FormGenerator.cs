@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace OOProjektovanje_lab2
 {
@@ -26,20 +27,44 @@ namespace OOProjektovanje_lab2
             setter.MdiParent = this.MdiParent;
             setter.Show();
         }
-        private void send(TextBox textBox,measurementType measurementType)
+       /* private void send(TextBox textBox,measurementType measurementType)
         {
             if(textBox.Text != null && FormMain.checkIfDouble(textBox) && checkIfInRange(textBox,measurementType))
             {
                 value value = new value(double.Parse(textBox.Text), DateTime.Now);
-                //this.paren.updateChildren(value, measurementType);
                 ((FormMain)this.MdiParent).updateChildren(value, measurementType);
             }
+        }*/
+
+        private value getValue(TextBox textBox,measurementType measurementType)
+        {
+            if (textBox.Text != null && FormMain.checkIfDouble(textBox) && checkIfInRange(textBox, measurementType))
+            {
+                return new value(double.Parse(textBox.Text), DateTime.Now);
+            }
+            else return null;
+        }
+        public void sendAll()
+        {
+            value temp = getValue(tempTxtBox, measurementType.temperatura);
+            value press = getValue(presTxtBox, measurementType.pritisak);
+            value hum = getValue(vlazTxtBox, measurementType.vlaznost);
+            send(temp, press, hum);
+        }
+        public void send(value temp,value press, value hum)
+        {
+            ((FormMain)this.MdiParent).updateChildren(temp, press, hum);
         }
         private void autoSend()
         {
-            ((FormMain)this.MdiParent).updateChildren(new value(StandardValues.Instance.Temperature),measurementType.temperatura);
+            send(
+                new value(StandardValues.Instance.Temperature),
+                new value(StandardValues.Instance.Pressure),
+                new value(StandardValues.Instance.Humidity)
+                );
+           /* ((FormMain)this.MdiParent).updateChildren(new value(StandardValues.Instance.Temperature),measurementType.temperatura);
             ((FormMain)this.MdiParent).updateChildren(new value(StandardValues.Instance.Pressure), measurementType.pritisak);
-            ((FormMain)this.MdiParent).updateChildren(new value(StandardValues.Instance.Humidity), measurementType.vlaznost);
+            ((FormMain)this.MdiParent).updateChildren(new value(StandardValues.Instance.Humidity), measurementType.vlaznost);*/
         }
         private bool checkIfInRange(TextBox textBox,measurementType measurementType)
         {
@@ -76,10 +101,7 @@ namespace OOProjektovanje_lab2
         }
         private void button1_Click(object sender, EventArgs e)
         {
-
-            send(tempTxtBox, measurementType.temperatura);
-            send(presTxtBox, measurementType.pritisak);
-            send(vlazTxtBox, measurementType.vlaznost);
+            sendAll();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -118,6 +140,18 @@ namespace OOProjektovanje_lab2
             else
             {
                 timer.Interval = 1000;
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                StreamReader reader = new StreamReader(dialog.FileName);
+                StandardValues.Instance.Temperature = new Range(double.Parse(reader.ReadLine()), double.Parse(reader.ReadLine()));
+                StandardValues.Instance.Pressure = new Range(double.Parse(reader.ReadLine()), double.Parse(reader.ReadLine()));
+                StandardValues.Instance.Humidity = new Range(double.Parse(reader.ReadLine()), double.Parse(reader.ReadLine()));
             }
         }
     }

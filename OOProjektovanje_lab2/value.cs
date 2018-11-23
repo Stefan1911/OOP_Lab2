@@ -13,6 +13,14 @@ namespace OOProjektovanje_lab2
         private double dataValue;
         private DateTime dateTime;
 
+        public double Vredons
+        {
+            get
+            {
+                return dataValue;
+            }
+        }
+
         public value(double dataValue, DateTime dateTime)
         {
             this.DataValue = dataValue;
@@ -25,6 +33,12 @@ namespace OOProjektovanje_lab2
             DateTime = DateTime.Now;
         }
 
+        internal string toString(int precision)
+        {
+            double temp = Math.Round(this.dataValue, precision);
+            return temp.ToString();
+        }
+
         public double DataValue { get => dataValue; set => dataValue = value; }
         public DateTime DateTime { get => dateTime; set => dateTime = value; }
         [System.ComponentModel.Browsable(false)]
@@ -35,5 +49,9 @@ namespace OOProjektovanje_lab2
             return this.dataValue.CompareTo(((value)obj).dataValue);
         }
 
+        public override string ToString()
+        {
+            return this.dataValue.ToString();
+        }
     }
 }

@@ -68,10 +68,16 @@ namespace OOProjektovanje_lab2
             humidity= new List<value>();
             temperature.Min();
         }
-        public void update(value value, measurementType measurementType)
+        public void update(value temp,value press,value hum)
         {
-            if(StandardValues.Instance.isInRange(value.DataValue,measurementType))
-                getMeasurment(measurementType).Add(value);
+            /*if(StandardValues.Instance.isInRange(value.DataValue,measurementType))
+                getMeasurment(measurementType).Add(value);*/
+            if (temp != null)
+                temperature.Add(temp);
+            if (press != null)
+                pressure.Add(press);
+            if (hum != null)
+                humidity.Add(hum);
             updateTexBoxes();
             updateLabels();
         }

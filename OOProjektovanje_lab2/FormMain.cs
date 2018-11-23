@@ -60,11 +60,11 @@ namespace OOProjektovanje_lab2
             this.updatablesChildren.Add(statForm);
             statForm.Show();
         }
-        public void updateChildren(value value,measurementType measurementType)
+        public void updateChildren(value temp,value press,value hum)
         {
             foreach(Updatable child in this.updatablesChildren)
             {
-                    child.update(value, measurementType);
+                    child.update(temp,press,hum);
             }
         }
         #endregion
@@ -100,6 +100,14 @@ namespace OOProjektovanje_lab2
         private void brojPrikaza_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar);  
+        }
+
+        private void listFormToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListForm listForm = new ListForm();
+            this.updatablesChildren.Add(listForm);
+            listForm.MdiParent = this;
+            listForm.Show();
         }
     }
 }

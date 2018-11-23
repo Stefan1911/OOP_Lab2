@@ -42,12 +42,15 @@ namespace OOProjektovanje_lab2
         }
        
         #region methodes
-        public void update(value value, measurementType measurementType)
+        public void update(value temp,value pres,value hum)
         {
-            if (measurementType == this.measurementType)
-            {
-                addData(value);
-            }
+            if (measurementType == measurementType.temperatura)
+                addData(temp);
+            if (measurementType == measurementType.pritisak)
+                addData(pres);
+            if (measurementType == measurementType.vlaznost)
+                addData(hum);
+
             updateChart();
         }
         private void addData(value value)

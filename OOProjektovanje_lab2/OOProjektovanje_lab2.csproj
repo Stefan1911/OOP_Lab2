@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListForm.Designer.cs">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="value.cs" />
     <Compile Include="FormGenerator.cs">
       <SubType>Form</SubType>
@@ -89,6 +95,7 @@
       <DependentUpon>RangeSetter.cs</DependentUpon>
     </Compile>
     <Compile Include="StandardValues.cs" />
+    <Compile Include="valueColetion.cs" />
     <EmbeddedResource Include="FormGenerator.resx">
       <DependentUpon>FormGenerator.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GraphForm.resx">
       <DependentUpon>GraphForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListForm.resx">
+      <DependentUpon>ListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="listFromGraphForm.resx">
       <DependentUpon>listFromGraphForm.cs</DependentUpon>

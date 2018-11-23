@@ -38,6 +38,7 @@
             this.brojPrikaza = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.statisticsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +48,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.foemGeneratorToolStripMenuItem,
             this.graphMenu,
-            this.statisticsToolStripMenuItem});
+            this.statisticsToolStripMenuItem,
+            this.listFormToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -123,6 +125,13 @@
             this.statisticsToolStripMenuItem.Text = "Statistics";
             this.statisticsToolStripMenuItem.Click += new System.EventHandler(this.statisticsToolStripMenuItem_Click);
             // 
+            // listFormToolStripMenuItem
+            // 
+            this.listFormToolStripMenuItem.Name = "listFormToolStripMenuItem";
+            this.listFormToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.listFormToolStripMenuItem.Text = "List Form";
+            this.listFormToolStripMenuItem.Click += new System.EventHandler(this.listFormToolStripMenuItem_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -154,6 +163,7 @@
         private System.Windows.Forms.ToolStripTextBox brojPrikaza;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem statisticsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listFormToolStripMenuItem;
     }
 }
 

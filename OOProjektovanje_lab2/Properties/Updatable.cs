@@ -8,6 +8,6 @@ namespace OOProjektovanje_lab2.Properties
 {
     interface Updatable
     {
-        void update(value value,measurementType measurementType);
+        void update(value temp,value press, value hum);
     }
 }
